@@ -5,7 +5,7 @@ ruby '2.5.1'
 gem 'dotenv-rails'
 gem 'table_print'
 gem 'faker'
-
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'

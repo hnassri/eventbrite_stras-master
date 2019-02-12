@@ -1,0 +1,26 @@
+<% if @user != current_user %>
+  <h1>Ce n''est pas ta page </h1>
+<% else %>
+<h1>Info</h1>
+<p>Prénom: <%= @user.first_name %></p>
+<p>Nom: <%= @user.last_name %></p>
+<p>Description: <%= @user.description %></p>
+<p>Email: <%= @user.email %></p>
+<p><%= link_to "Editer le profil", edit_user_path(@user.id), class: "btn btn-success" %>
+<p><%= link_to "Changer de mot de passe ou d'email", edit_user_registration_path, class: "btn btn-warning" %>
+<p>Tous vos événements:</p>
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+
+  <% @event.each do |event| %>
+    <div class="col-md-4">
+      
+      <h2><%= event.title %></h2>
+      <p><%= event.description %></p>
+      <span class="btn btn-secondary"><%= link_to "View details", event_path(event.id) %></span>
+      </div>
+      <% end %>
+  </div>
+</div>
+<%end%>
