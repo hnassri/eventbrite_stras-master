@@ -23,7 +23,7 @@
     <ul class="navbar-nav mr-auto d-flex justify-content-space-between">
       <% if current_user %>
        <li class="nav-item">
-      <span class= "nav-link"><%= link_to "Se déconnecter" , destroy_user_session_path %></span>
+      <span class= "nav-link"><%= link_to "Se déconnecter" , destroy_user_session_path, method: "delete" %></span>
     </li>
     <li class="nav-item">
       <span class= "nav-link"><%= link_to "Mon profil" , user_path(current_user) %></span>
