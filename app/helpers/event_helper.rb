@@ -1,9 +1,14 @@
 module EventHelper
-  def is_participate?
-    if Attendance.where(user_id: current_user).count == 0 
-      false
-    else
-      true
-    end
+  def participate
+   if current_user != @event.user 
+      Attendance.all.each do |attendance| 
+        if attendance.user_id == current_user.id && attendance.event_id == @event.id 
+          @a = false 
+          break 
+        else 
+          @a = true 
+        end 
+      end
+    end 
   end
 end

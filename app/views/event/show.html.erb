@@ -1,4 +1,4 @@
-<h1>Info sur <%= @event.title %></h1>
+<h1 class= "text text-center">Info sur <%= @event.title %></h1>
 
 <p>Sa description: <%= @event.description %></p>
 <p>Sa localisation: <%= @event.location %></p>
@@ -6,17 +6,8 @@
 <p>Son créateur: <%= @event.user.email %></p>
 <p>Nombre d'inscrit: <%= @event.attendances.count %></p>
 <p>Débute à <%= @event.start_date %> et fini à <%= @event.end_date %></p>
-<p><% if current_user != @event.user %>
-  <% Attendance.all.each do |attendance| %>
-  <% if attendance.user_id == current_user.id && attendance.event_id == @event.id %>
-  <% @a = false %>
-  <% break %>
-  <% else %>
-    <% @a = true %>
-    <% end %>
-  <% end %>
-    <% if @a == true %>
+<p> <% if participate %>
     <%= link_to "Rejoindre l'évènement", new_event_charge_path(@event.id), class: "btn btn-success" %>
-  <% end %><% end %></p>
+  <% end %></p>
 <p><% if current_user == @event.user %>
   <%= link_to "Mon espace évènement", event_charges_path(@event.id), class: "btn btn-success" %><% end %> </p>
