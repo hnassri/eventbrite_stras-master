@@ -1,4 +1,4 @@
-<h1 class="text-center">Créer un événement</h1>
+<h1 class="text-center">Créer un évènement</h1>
 </br>
 <div class="container w-50">
 
@@ -13,11 +13,11 @@
   </div>
   <div class="form-group">
     <%= label_tag 'Durée(en min)' %>
-    <%= text_field_tag 'duration', @event.duration, class: 'form-control' %>
+    <%= number_field_tag 'duration', @event.duration, class: 'form-control' %>
   </div>
   <div class="form-group">
     <%= label_tag 'Price' %>
-    <%= text_field_tag 'price', @event.price, class: 'form-control' %>
+    <%= number_field_tag 'price', @event.price, class: 'form-control' %>
   </div>
   <div class="form-group">
   <div class="form-group">
@@ -26,7 +26,7 @@
   </div>
   <div class="form-group">
       <%= label_tag 'Date de début' %>
-      <%= text_field_tag 'start_date', @event.start_date, class: 'form-control' %>
+      <%= date_field_tag 'start_date', @event.start_date, class: 'form-control' %>
   </div>
   <%= submit_tag 'Créer un événement', class: 'btn btn-primary' %>
   </div>
