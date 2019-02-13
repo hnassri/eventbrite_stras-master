@@ -3,7 +3,6 @@ class EventController < ApplicationController
   before_action :authenticate_admin, only: [:edit, :destroy]
 
   def index
-
   end
 
   def new

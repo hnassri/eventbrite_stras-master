@@ -39,4 +39,5 @@ class ChargesController < ApplicationController
   def authenticate_admin
     current_user  == Event.find(params[:event_id]).user ? true : false
   end
+  
 end

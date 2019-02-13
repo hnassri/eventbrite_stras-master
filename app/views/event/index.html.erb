@@ -3,7 +3,6 @@
 <div class="row">
 <% Event.all.each do |event| %>
   <div class="col-md-4">
-    
     <h2><%= event.title %></h2>
     <p><%= event.description %></p><span class="btn btn-secondary"><%= link_to "View details", event_path(event.id) %></span>
     </div>
