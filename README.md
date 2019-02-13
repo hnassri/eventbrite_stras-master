@@ -1,4 +1,6 @@
 # README
+
+APP Heroku: https://eventbrite-strasbourg.herokuapp.com/
 L'application sera une version minimaliste (mais fonctionnelle, c'est le plus important) d'Eventbrite, un site qui propose plein d'événements que tu peux rejoindre. Les événements ne concernent qu'une seule ville, la ville où tu te trouves.Nous avons créer une base de données, composée de 3 models:
 - User
 - Event
