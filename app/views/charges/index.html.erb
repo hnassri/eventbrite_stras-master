@@ -1,0 +1,12 @@
+
+<p><%= link_to "Editer l'évènement", edit_event_path(@event.id), class: "btn btn-success" %></p>
+<div class="container">
+<!-- Example row of columns -->
+<div class="row">
+<% @attendance.each do |attendance| %>
+  <div class="col-md-4">
+    <p><%= attendance.user.first_name %>
+    <p><%= attendance.user.email %></p>
+    </div>
+    <% end %>
+</div>

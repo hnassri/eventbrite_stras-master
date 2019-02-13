@@ -6,4 +6,6 @@
 <p>Son créateur: <%= @event.user.email %></p>
 <p>Nombre d'inscrit: <%= @event.attendances.count %></p>
 <p>Débute à <%= @event.start_date %> et fini à <%= @event.end_date %></p>
-<p><%= link_to "Rejoindre l'évènement", new_event_charge_path(@event.id), class: "btn btn-success" %>
+<p><%= link_to "Rejoindre l'évènement", new_event_charge_path(@event.id), class: "btn btn-success" %></p>
+<p><% if current_user == @event.user %>
+  <%= link_to "Mon espace évènement", event_charges_path(@event.id), class: "btn btn-success" %><% end %> </p>
