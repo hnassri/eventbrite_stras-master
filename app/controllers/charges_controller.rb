@@ -22,7 +22,7 @@ class ChargesController < ApplicationController
     )
     attendance = Attendance.new(stripe_customer_id: customer.id, event_id: params[:event_id], user_id: current_user.id)
     if attendance.save
-      redirect_to event_path(params[:event_id])
+      redirect_to "/event/#{@event.id}"
     end
   # rescue Stripe::CardError => e
   #   flash[:error] = e.message
