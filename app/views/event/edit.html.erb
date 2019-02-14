@@ -1,5 +1,5 @@
 <% if current_user == @event.user %>
-<h1 class="text-center">Éditer un évènement</h1>
+<h1 class="text-center">Editer un évènement</h1>
 </br>
 <div class="container w-50">
 
@@ -28,7 +28,7 @@
       <%= label_tag 'Date de début' %>
       <%= date_field_tag 'start_date', @event.start_date, class: 'form-control' %>
   </div>
-  <%= submit_tag 'Éditer  l'évènement', class: 'btn btn-primary' %>
+  <%= submit_tag 'Editer  évènement', class: 'btn btn-primary' %>
 <% end %>
   <p><%= link_to 'Détruire cet évènement', event_path(@event.id),
     method: :delete,
